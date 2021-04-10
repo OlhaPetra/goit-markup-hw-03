@@ -12,6 +12,16 @@
 
 /*General*/
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: var(--primary-bcg-color);
   color: var(--primary-title-color);
@@ -20,8 +30,17 @@ body {
   letter-spacing: 0.03em;
 }
 
+.conteiner {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid tomato;
+}
+
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -53,13 +72,20 @@ body {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  letter-spacing: 0.03em;
   cursor: pointer;
+
+  padding: 6px 24px;
+  border-radius: 4px;
+  border: none;
 }
 
 .button:hover,
 .button:focus {
   color: var(--dark-bcg-text);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .title {
@@ -102,6 +128,7 @@ header .logo-web {
 /*section hero*/
 .hero {
   background-color: var(--footer-bcg);
+  text-align: center;
 }
 
 .hero .title {
@@ -110,9 +137,12 @@ header .logo-web {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.hero-title {
+  margin: 0 0 30px 0;
 }
 
 .hero-button {
@@ -124,18 +154,29 @@ header .logo-web {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 10px 32px;
 }
 
 /*section features*/
 
+.features {
+  padding-top: 94px;
+}
+
 .features-title {
   line-height: 1.14;
   text-transform: uppercase;
+  margin: 0 0 10px 0;
 }
 
 .features-text {
   color: var(--primary-text-color);
   line-height: 1.71;
+  margin: 0;
 }
 
 /*section works, section team*/
@@ -143,10 +184,19 @@ header .logo-web {
 .work,
 .team {
   text-align: center;
+  padding: 94px 0;
+}
+
+.work .title {
+  margin: 0 0 50px 0;
 }
 
 .team {
   background-color: var(--secondary-bcg-color);
+}
+
+.team .title {
+  margin: 0 0 50px 0;
 }
 
 .team-name,
@@ -157,16 +207,23 @@ header .logo-web {
 
 .team-name {
   font-weight: 500;
+  margin: 0;
 }
 
 .team-position {
   color: var(--primary-text-color);
+  margin: 0;
 }
 
 /*footer*/
 
 footer {
   background-color: var(--footer-bcg);
+  padding: 60px 0;
+}
+
+footer .logo-link {
+  margin-bottom: 20px;
 }
 
 footer .logo-web {
@@ -183,6 +240,7 @@ footer .logo-studio {
 .footer-map,
 .footer-contact {
   line-height: 1.71;
+  margin: 20px 0 9px 0;
 }
 .footer-map {
   color: var(--dark-bcg-text);
