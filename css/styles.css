@@ -15,7 +15,6 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *::before,
 *::after {
@@ -25,6 +24,7 @@ html {
 body {
   background-color: var(--primary-bcg-color);
   color: var(--primary-title-color);
+
   font-family: var(--font-family-text), sans-serif;
   font-size: var(--font-size-text);
   letter-spacing: 0.03em;
@@ -39,9 +39,10 @@ body {
 }
 
 .list {
-  list-style: none;
   padding: 0;
   margin: 0;
+
+  list-style: none;
 }
 
 .visually-hidden {
@@ -58,6 +59,7 @@ body {
 .link,
 .logo-link {
   color: inherit;
+
   text-decoration: none;
 }
 
@@ -67,6 +69,10 @@ body {
 }
 
 .button {
+  padding: 6px 24px;
+  border-radius: 4px;
+  border: none;
+
   color: inherit;
   background: var(--secondary-bcg-color);
   font-weight: 500;
@@ -74,11 +80,8 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  cursor: pointer;
 
-  padding: 6px 24px;
-  border-radius: 4px;
-  border: none;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -123,12 +126,12 @@ header .logo-web {
 
 .nav .link,
 .contact .link {
+  display: block;
+  padding: 32px 0;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
-  display: block;
-  padding: 32px 0;
 }
 
 .main-nav {
@@ -280,10 +283,14 @@ footer .logo-link {
   font-style: inherit;
 }
 
+.list-address {
+  display: block;
+  margin-bottom: 9px;
+}
+
 .footer-map,
 .footer-contact {
   line-height: 1.71;
-  margin-bottom: 9px;
 }
 .footer-map {
   color: var(--dark-bcg-text);
